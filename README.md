@@ -34,7 +34,6 @@
 - **College ID System** - each college gets a short ID like `DIT-K2X9`. Students and faculty use it to instantly connect - no Supabase URLs, no setup on their end.
 - **Setup Wizard** - college IT admins run through a guided setup (database, schema, AI, master admin) in minutes.
 - **Role-Based Dashboards** - admins manage everything, faculty see their schedule and courses, students see their timetable and enrollments.
-- **Vendor Console** - platform owner dashboard at `/vendor` to track all registered colleges, view their College IDs, and copy shareable login links.
 - **Your Data, Your Database** - every college brings their own Supabase project. Schedulify never touches their student data.
 - **AI Schedule Parsing** - powered by Groq to parse uploaded schedule files and detect timetable conflicts.
 
@@ -95,7 +94,7 @@ Run the vendor registry schema in your Supabase SQL editor - file is at `supabas
 npm run dev
 ```
 
-Visit `localhost:5173/vendor` and enter your access code to see the vendor console.
+Visit `localhost:5173` and log in as a **user** or **admin**.
 
 ---
 
@@ -130,8 +129,7 @@ schedulify/
 │   │       └── db-service.ts          # DB query helpers
 │   ├── pages/
 │   │   ├── GatewayPage.tsx            # Entry screen (login / setup)
-│   │   ├── SetupWizard.tsx            # College onboarding wizard
-│   │   └── VendorDashboard.tsx        # Vendor console
+│   │   └── SetupWizard.tsx            # College onboarding wizard
 │   ├── types/
 │   │   └── index.ts                   # Shared TypeScript types
 │   ├── App.tsx
