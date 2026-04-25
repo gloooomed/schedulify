@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  body {
+    @apply font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 text-sm;
+  }
+
+  .btn-secondary {
+    @apply bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 font-medium py-2 px-4 rounded-lg transition-all duration-200 text-sm;
+  }
+
+  .card {
+    @apply bg-white/5 border border-white/10 rounded-xl p-5;
+  }
+
+  .input {
+    @apply w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-white text-sm placeholder-slate-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-slate-400 mb-1.5;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white/5 text-white text-sm;
+  }
+}
+
+
+/* Custom animations and effects */
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/10 border border-white/20;
+  }
+  
+  .neumorphic {
+    box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff;
+  }
+  
+  .neumorphic-inset {
+    box-shadow: inset 8px 8px 16px #d1d9e6, inset -8px -8px 16px #ffffff;
+  }
+}
+
+/* Modern Calendar Custom Styles */
+.modern-calendar-view .fc-theme-standard td, 
+.modern-calendar-view .fc-theme-standard th {
+  border-color: #e5e7eb;
+}
+
+.modern-calendar-view .fc-theme-standard .fc-scrollgrid {
+  border-color: #e5e7eb;
+}
+
+.modern-calendar-view .fc-col-header-cell {
+  background-color: #f8fafc;
+  font-weight: 600;
+  color: #475569;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.modern-calendar-view .fc-daygrid-day-number {
+  color: #64748b;
+  font-weight: 500;
+  padding: 4px 6px;
+}
+
+.modern-calendar-view .fc-day-today {
+  background-color: #eff6ff !important;
+}
+
+.modern-calendar-view .fc-day-today .fc-daygrid-day-number {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.modern-calendar-view .fc-event {
+  border-radius: 6px;
+  border: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.modern-calendar-view .fc-event:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.modern-calendar-view .fc-timegrid-event {
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.modern-calendar-view .fc-list-event:hover td {
+  background-color: #f1f5f9;
+}
+
+.modern-calendar-view .fc-button-primary {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.modern-calendar-view .fc-button-primary:hover {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.modern-calendar-view .fc-button-primary:disabled {
+  background-color: #94a3b8;
+  border-color: #94a3b8;
+  transform: none;
+}
+
+.modern-calendar-view .fc-today-button {
+  background-color: #10b981;
+  border-color: #10b981;
+}
+
+.modern-calendar-view .fc-today-button:hover {
+  background-color: #059669;
+  border-color: #059669;
+}
+
+.modern-calendar-view .fc-toolbar-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.modern-calendar-view .fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.modern-calendar-view .fc-direction-ltr .fc-button-group > .fc-button:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -1px;
+}
+
+.modern-calendar-view .fc-scrollgrid-section-header > td {
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.modern-calendar-view .fc-timegrid-slot {
+  height: 3rem;
+}
+
+.modern-calendar-view .fc-timegrid-slot-label {
+  color: #64748b;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.modern-calendar-view .fc-timegrid-axis {
+  width: 60px;
+}
+
+.modern-calendar-view .fc-scrollgrid-sync-inner {
+  min-height: auto;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modern-calendar-view .fc-event {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* React Big Calendar Styling */
+.custom-calendar {
+  background: white;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+.custom-calendar .rbc-header {
+  background-color: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 12px 8px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.custom-calendar .rbc-time-slot {
+  border-top: 1px solid #f1f5f9;
+}
+
+.custom-calendar .rbc-today {
+  background-color: #eff6ff;
+}
+
+.custom-calendar .rbc-event {
+  border: none;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-size: 12px;
+}
+
+.custom-calendar .rbc-button-link {
+  color: #374151;
+  font-weight: 500;
+}
+
+.custom-calendar .rbc-toolbar {
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.custom-calendar .rbc-toolbar button {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  color: #374151;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: all 0.2s;
+}
+
+.custom-calendar .rbc-toolbar button:hover {
+  background: #e2e8f0;
+  border-color: #cbd5e1;
+}
+
+.custom-calendar .rbc-toolbar button.rbc-active {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: white;
+}
+
+.custom-calendar .rbc-show-more {
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .modern-calendar-view .fc-toolbar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .modern-calendar-view .fc-toolbar-title {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  
+  .modern-calendar-view .fc-button-group {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .custom-calendar .rbc-toolbar {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .custom-calendar .rbc-toolbar .rbc-btn-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
