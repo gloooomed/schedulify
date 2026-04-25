@@ -29,6 +29,10 @@
 
 ---
 
+> **Who is this for?** Schedulify is built for **admins, faculty, and students** of a college. Admins set the platform up, faculty and students log in using a College ID. There are no other roles.
+
+---
+
 ## What it does
 
 - **College ID System** - each college gets a short ID like `DIT-K2X9`. Students and faculty use it to instantly connect - no Supabase URLs, no setup on their end.
@@ -54,22 +58,19 @@
 
 ## How it works
 
-Schedulify can run as a single Vercel deployment but serves multiple colleges. Each college has its own isolated Supabase database - the platform owner never touches their data.
+One deployment serves multiple colleges. Each college connects their own Supabase database - their data stays with them.
 
 ```
-Your Vercel Deployment  ──▶  Central Vendor Registry (your Supabase)
-                                      │
-                    ┌─────────────────┼──────────────────┐
-                    ▼                 ▼                  ▼
-             College A DB       College B DB       College C DB
-             (their Supabase)  (their Supabase)  (their Supabase)
+Schedulify App  ──▶  College Registry
+                           │
+           ┌───────────────┼───────────────┐
+           ▼               ▼               ▼
+      College A DB    College B DB    College C DB
 ```
 
 ---
 
 ## Getting Started
-
-> **Note:** Schedulify needs two Supabase projects - one for the vendor registry (yours) and one per college (theirs).
 
 ```bash
 git clone https://github.com/gloooomed/schedulify.git
@@ -80,15 +81,12 @@ npm install
 Create a `.env` file:
 
 ```env
-# Your central registry — tracks all registered colleges
-VITE_VENDOR_SUPABASE_URL=your_vendor_supabase_url
-VITE_VENDOR_SUPABASE_ANON_KEY=your_vendor_supabase_anon_key
-
-# Secret gate — only share with approved colleges
-VITE_VENDOR_ACCESS_CODE=your-secret-access-code
+VITE_VENDOR_SUPABASE_URL=your_supabase_url
+VITE_VENDOR_SUPABASE_ANON_KEY=your_supabase_anon_key
+VITE_VENDOR_ACCESS_CODE=your-access-code
 ```
 
-Run the vendor registry schema in your Supabase SQL editor - file is at `supabase/vendor_registry_schema.sql`.
+Run the registry schema in your Supabase SQL editor - file is at `supabase/vendor_registry_schema.sql`.(Only for the contributors)
 
 ```bash
 npm run dev
@@ -138,7 +136,7 @@ schedulify/
 ├── supabase/
 │   ├── migrations/
 │   │   └── 001_schema.sql             # College DB schema + RLS policies
-│   └── vendor_registry_schema.sql     # Vendor registry schema
+│   └── vendor_registry_schema.sql     # College registry schema
 ├── .env.example
 ├── index.html
 ├── vite.config.ts
