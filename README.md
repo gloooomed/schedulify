@@ -29,10 +29,6 @@
 
 ---
 
-> **Who is this for?** Schedulify is built for **admins, faculty, and students** of a college. Admins set the platform up, faculty and students log in using a College ID. There are no other roles.
-
----
-
 ## What it does
 
 - **College ID System** - each college gets a short ID like `DIT-K2X9`. Students and faculty use it to instantly connect - no Supabase URLs, no setup on their end.
@@ -52,7 +48,6 @@
 | Styling | [![CSS](https://img.shields.io/badge/Vanilla_CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS) |
 | Auth & DB | [![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com) |
 | AI | [![Groq](https://img.shields.io/badge/Groq-F55036?style=for-the-badge&logo=groq&logoColor=white)](https://groq.com) |
-| Animations | [![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion) |
 
 ---
 
