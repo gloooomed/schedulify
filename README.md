@@ -22,7 +22,7 @@
     <img src="https://img.shields.io/github/forks/gloooomed/schedulify?style=for-the-badge&labelColor=1a1a2e&color=4f8ef7&label=FORKS" alt="Forks" />
   </a>
   <a href="LICENSE">
-    <img src="https://img.shields.io/badge/LICENSE-PROPRIETARY-red?style=for-the-badge&labelColor=1a1a2e" alt="License" />
+    <img src="https://img.shields.io/badge/LICENSE-MIT-brightgreen?style=for-the-badge&labelColor=1a1a2e" alt="License" />
   </a>
   <img src="https://img.shields.io/badge/STATUS-EARLY_ALPHA-orange?style=for-the-badge&labelColor=1a1a2e" alt="Status" />
 </p>
@@ -162,10 +162,10 @@ Each college runs the setup wizard, brings their own Supabase project, and gets 
 
 ## Status
 
-Early alpha — v0.0.1. Core flows work, rough edges still being fixed. Not production-ready yet.
+Early alpha - v0.0.1. Core flows work, rough edges still being fixed. Not production-ready yet.
 
 ---
 
 ## License
 
-Proprietary. All rights reserved. Not open for commercial use or redistribution without permission.
+MIT - see [LICENSE](LICENSE) for details.
