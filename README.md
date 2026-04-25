@@ -31,12 +31,12 @@
 
 ## What it does
 
-- **College ID System** — each college gets a short ID like `DIT-K2X9`. Students and faculty use it to instantly connect — no Supabase URLs, no setup on their end.
-- **Setup Wizard** — college IT admins run through a guided setup (database, schema, AI, master admin) in minutes.
-- **Role-Based Dashboards** — admins manage everything, faculty see their schedule and courses, students see their timetable and enrollments.
-- **Vendor Console** — platform owner dashboard at `/vendor` to track all registered colleges, view their College IDs, and copy shareable login links.
-- **Your Data, Your Database** — every college brings their own Supabase project. Schedulify never touches their student data.
-- **AI Schedule Parsing** — powered by Groq to parse uploaded schedule files and detect timetable conflicts.
+- **College ID System** - each college gets a short ID like `DIT-K2X9`. Students and faculty use it to instantly connect - no Supabase URLs, no setup on their end.
+- **Setup Wizard** - college IT admins run through a guided setup (database, schema, AI, master admin) in minutes.
+- **Role-Based Dashboards** - admins manage everything, faculty see their schedule and courses, students see their timetable and enrollments.
+- **Vendor Console** - platform owner dashboard at `/vendor` to track all registered colleges, view their College IDs, and copy shareable login links.
+- **Your Data, Your Database** - every college brings their own Supabase project. Schedulify never touches their student data.
+- **AI Schedule Parsing** - powered by Groq to parse uploaded schedule files and detect timetable conflicts.
 
 ---
 
@@ -55,7 +55,7 @@
 
 ## How it works
 
-Schedulify runs as a single Vercel deployment but serves multiple colleges. Each college has its own isolated Supabase database — the platform owner never touches their data.
+Schedulify can run as a single Vercel deployment but serves multiple colleges. Each college has its own isolated Supabase database - the platform owner never touches their data.
 
 ```
 Your Vercel Deployment  ──▶  Central Vendor Registry (your Supabase)
@@ -70,7 +70,7 @@ Your Vercel Deployment  ──▶  Central Vendor Registry (your Supabase)
 
 ## Getting Started
 
-> **Note:** Schedulify needs two Supabase projects — one for the vendor registry (yours) and one per college (theirs).
+> **Note:** Schedulify needs two Supabase projects - one for the vendor registry (yours) and one per college (theirs).
 
 ```bash
 git clone https://github.com/gloooomed/schedulify.git
@@ -151,14 +151,10 @@ schedulify/
 
 ## Deploying
 
-> Not deployed yet - still polishing things up. Will add the live link here once it's ready.
-
-When ready, the plan is:
-
 1. Push to GitHub
-2. Import on [Vercel](https://vercel.com)
-3. Add the three env vars in Vercel → Settings → Environment Variables
-4. Deploy - every `git push` after that auto-redeploys
+2. Import the repo on [Vercel](https://vercel.com)
+3. Add your three env vars in Vercel → Settings → Environment Variables
+4. Deploy — every `git push` auto-redeploys
 
 Each college runs the setup wizard, brings their own Supabase project, and gets a College ID. Students visit `your-domain.vercel.app?college=THEIR-ID` to log in instantly.
 
