@@ -89,7 +89,7 @@ VITE_VENDOR_SUPABASE_ANON_KEY=your_vendor_supabase_anon_key
 VITE_VENDOR_ACCESS_CODE=your-secret-access-code
 ```
 
-Run the vendor registry schema in your Supabase SQL editor — file is at `supabase/vendor_registry_schema.sql`.
+Run the vendor registry schema in your Supabase SQL editor - file is at `supabase/vendor_registry_schema.sql`.
 
 ```bash
 npm run dev
@@ -154,7 +154,7 @@ schedulify/
 1. Push to GitHub
 2. Import the repo on [Vercel](https://vercel.com)
 3. Add your three env vars in Vercel → Settings → Environment Variables
-4. Deploy — every `git push` auto-redeploys
+4. Deploy
 
 Each college runs the setup wizard, brings their own Supabase project, and gets a College ID. Students visit `your-domain.vercel.app?college=THEIR-ID` to log in instantly.
 
