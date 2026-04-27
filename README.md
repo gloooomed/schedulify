@@ -153,7 +153,7 @@ Each college runs the setup wizard, brings their own Supabase project, and gets 
 
 ## Status
 
-Early alpha - v0.0.1. Core flows work, rough edges still being fixed. Not production-ready yet.
+Early alpha - v0.0.1. Core flows work, rough edges still being fixed. Not production-ready now.
 
 ---
 
