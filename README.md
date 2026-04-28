@@ -159,4 +159,4 @@ Early alpha - v0.0.1. Core flows work, rough edges still being fixed. Not produc
 
 ## License
 
-MIT - see [LICENSE](LICENSE) for details.
+MIT - see [LICENSE](LICENSE) for more details.
